@@ -3,7 +3,7 @@ class Solution:
     # @param candidates, a list of integers
     # @param target, integer
     # @return a list of lists of integers
-    def combinationSum(self, candidates, target):
+    def combination_sum(self, candidates, target):
         # write your code here
         candidates.sort()
         path, result = [], []
@@ -30,7 +30,8 @@ class Solution:
             path.pop(-1)
             begin += 1
 
-    def set_list(self, l):
+    @staticmethod
+    def set_list(l):
         res = []
         for i in l:
             while i is not None:
@@ -42,4 +43,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    print(Solution().combinationSum([1], 1))
+    print(Solution().combination_sum([1], 1))

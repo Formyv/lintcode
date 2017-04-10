@@ -1,6 +1,6 @@
 # _*_coding=utf-8_*_
 # method_1
-
+# DP
 class Solution:
     """
     @param n and m: positive integer(1 <= n , m <= 100)
@@ -16,11 +16,10 @@ class Solution:
             for j in range(1, n):
                 record[i][j] = record[i - 1][j] + record[i][j - 1]
         return record[m - 1][n - 1]
-        # write your code here
 
 
 # method_2
-
+# recursion
 class Solution:
     """
     @param n and m: positive integer(1 <= n , m <= 100)
@@ -34,4 +33,3 @@ class Solution:
             return 1
         else:
             return self.uniquePaths(m - 1, n) + self.uniquePaths(m, n - 1)
-            # write your code here
