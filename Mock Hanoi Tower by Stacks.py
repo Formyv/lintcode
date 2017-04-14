@@ -22,7 +22,7 @@ class Tower(object):
         if len(self.disks) > 0 and self.disks[-1] <= d:
             print("Error placing disk %s" % d)
         else:
-            self.disks.append(d);
+            self.disks.append(d)
 
     # @param {Tower} t a tower
     # Move the top disk of this tower to the top of t.
